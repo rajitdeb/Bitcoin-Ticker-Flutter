@@ -68,11 +68,9 @@ class _PriceScreenState extends State<PriceScreen> {
             initialItem: selectedCurrency,
           ),
           onSelectedItemChanged: (int selectedItem) {
-            setState(() async {
-              double rate = await networkHelper.getAssetData(
-                  "BTC", kCurrenciesList[selectedCurrency]);
+            setState(() {
               selectedCurrency = selectedItem;
-              btcRate = "1 BTC = $rate ${kCurrenciesList[selectedCurrency]}";
+              getDataFromAPI();
             });
           },
           children: kCurrenciesList.map((String itemValue) {
