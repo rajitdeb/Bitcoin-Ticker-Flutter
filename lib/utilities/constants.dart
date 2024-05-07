@@ -23,3 +23,7 @@ const List<String> kCurrenciesList = [
 ];
 
 const List<String> kCryptoList = ["BTC", "ETH", "LTC"];
+
+const kBaseUrl = "https://rest.coinapi.io/v1/exchangerate";
+
+const kApiKey = "YOUR_COIN_API_KEY";
